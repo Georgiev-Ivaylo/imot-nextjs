@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .body {
+    @apply antialiased bg-gradient-to-b from-orange-100 to-orange-800 min-h-screen
+    dark:from-orange-800 dark:to-orange-400 font-semibold tracking-wide;
+  }
+  .base-container {
+    @apply md:container mx-auto;
+  }
+
+  .title {
+    @apply p-6 text-center text-4xl;
+  }
+
+  .nav-grid {
+    @apply rounded-lg p-4 m-1 grid grid-cols-6 gap-2 text-center shadow-[inset_0_0_2px_0] shadow-yellow-500;
+  }
+
+  .nav-btn {
+    @apply rounded bg-yellow-400 hover:bg-yellow-500 p-1 text-black transition ease-in-out duration-300;
+  }
+
+  .box-grid {
+    @apply grid md:grid-cols-3 gap-2 p-2;
+  }
+  .box {
+    @apply rounded-sm border-2 border-yellow-400 p-2 hover:border-yellow-600 bg-white bg-opacity-10 text-black transition ease-in-out duration-300;
+  }
+  .box-title {
+    @apply p-2 text-center text-2xl;
+  }
+  .box-details {
+    @apply grid grid-cols-2 gap-1;
+  }
+  .box-line {
+    @apply p-1 leading-3;
+  }
+  .box-line-clamp {
+    @apply min-h-14 p-1 leading-6 line-clamp-2;
+  }
+
+  .pag-grid {
+    @apply flex flex-row justify-end p-2;
+  }
+  .pag-btn {
+    @apply text-center rounded-2xl bg-yellow-400 cursor-pointer hover:bg-yellow-500 p-1 m-1 size-8 text-black transition ease-in-out duration-300;
+  }
+
+  .search-grid {
+    @apply grid grid-cols-4 gap-2 p-2;
+  }
+  .search-quick {
+    @apply col-span-3 rounded-md p-2 text-orange-300 focus:ring-0 focus:outline-none focus:border-b-yellow-700 placeholder-orange-300 bg-transparent border-b-2 border-b-yellow-500 transition ease-in-out duration-300;
+  }
+  .search-select {
+    @apply rounded-md p-2 text-orange-300  bg-transparent border-b-2 border-b-yellow-500;
+  }
+  .search-select-option {
+    @apply block w-full p-2 mb-6 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+  }
+
+  .left-arrow {
+    @apply bg-[url('./public/images/arrow-left.svg')] bg-[length:16px_auto] bg-no-repeat bg-center;
+  }
+
+  .right-arrow {
+    @apply bg-[url('./public/images/arrow-right.svg')] bg-[length:16px_auto] bg-no-repeat bg-center;
+  }
+
+  .active {
+    @apply bg-yellow-500;
+  }
+
+  .fantom {
+    @apply opacity-0;
+  }
+}
